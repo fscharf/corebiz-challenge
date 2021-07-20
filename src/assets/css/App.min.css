@@ -8,8 +8,13 @@
 
 .carousel-img-text {
   position: absolute;
-  top: 30%;
+  top: 25%;
   left: 5%; }
+
+.border-bottom-only {
+  border-width: 0 0 2px 0;
+  border-style: solid;
+  border-color: #0d0d0e; }
 
 .object-centered {
   transform: translateX(-50%);
@@ -49,7 +54,7 @@
 .navbar-menu-icon {
   display: none; }
 
-#mainCarousel > .carousel-indicators li {
+#mainCarousel > .carousel-indicators button {
   width: 10px;
   height: 10px;
   border-radius: 100%; }
@@ -57,11 +62,10 @@
 @media screen and (max-width: 768px) {
   .carousel-img-left {
     display: none; }
-  .carousel-img-right {
-    background: rgba(0, 0, 0, 0.55);
-    background-blend-mode: multiply; }
   .carousel-img-text {
-    width: 80%; }
+    width: 80%;
+    top: 1rem;
+    left: 2rem; }
   .cart-items {
     position: absolute;
     top: 1rem;
@@ -72,8 +76,8 @@
     width: 100%; }
   .navbar-menu-icon {
     position: absolute;
-    top: 1rem;
-    left: 1rem;
+    top: 1.2rem;
+    left: 1.2rem;
     display: block; }
   .object-centered-mobile {
     transform: translateX(-50%);

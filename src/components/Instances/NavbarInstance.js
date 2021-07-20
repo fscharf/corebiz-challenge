@@ -1,16 +1,12 @@
 import React from "react";
 import { Container, Nav, Navbar, InputGroup } from "react-bootstrap";
 import Brand from "../../assets/image/brand.svg";
-import {
-  AiOutlineMenu,
-  AiOutlineSearch,
-  AiOutlineShoppingCart,
-  AiOutlineUser,
-} from "react-icons/ai";
+import { AiOutlineMenu, AiOutlineSearch, AiOutlineUser } from "react-icons/ai";
+import { CartInstance } from "./CartInstance";
 
 export const NavbarInstance = () => {
   const [state, setState] = React.useState({
-    cartCount: "",
+    cartCount: 0
   });
 
   React.useEffect(() => {
@@ -61,17 +57,7 @@ export const NavbarInstance = () => {
               Minha Conta
             </Nav.Link>
           </div>
-          <Nav.Link
-            title="Meu Carrinho"
-            className="cart-items"
-            active
-            href="#cart"
-          >
-            <AiOutlineShoppingCart size="25" />
-            <div className="badge bg-danger rounded-circle">
-              {state.cartCount}
-            </div>
-          </Nav.Link>
+          <CartInstance value={state.cartCount} />
         </Nav>
       </Container>
     </Navbar>

@@ -41,7 +41,8 @@ export const ProductsSection = () => {
   };
 
   return (
-    <Container className="py-5">
+    <section className="py-5">
+      <Container>
       <h4 className="fw-bold">Mais Vendidos</h4>
       <hr className="section-border" />
 
@@ -97,6 +98,7 @@ export const ProductsSection = () => {
           )}
         </>
       )}
-    </Container>
+      </Container>
+    </section>
   );
 };
