@@ -1,0 +1,104 @@
+* {
+  font-family: "Nunito", sans-serif;
+}
+
+.carousel-img-left {
+  position: absolute;
+  left: -25rem;
+}
+
+.carousel-img-text {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+}
+
+.object-centered {
+  transform: translateX(-50%);
+  left: 50%;
+  position: absolute;
+}
+
+.custom-search-input {
+  border-width: 0 0 1px 0;
+  padding: 0.3rem;
+  border-style: solid;
+  border-color: $gray-400;
+  width: 500px;
+  border-radius: 0;
+}
+
+.section-border {
+  border: 3px solid $secondary;
+  border-radius: 1rem;
+  width: 75px;
+}
+
+.product-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.section-border.section-border-white {
+  border-color: $white;
+}
+
+.custom-search-input:focus {
+  border-width: 0 0 2px 0;
+  border-style: solid;
+  border-color: $primary;
+  outline: none;
+}
+
+.card {
+  transition: ease 0.4s;
+}
+
+.card:hover {
+  @extend .shadow;
+}
+
+.navbar-menu-icon {
+  display: none;
+}
+
+#mainCarousel > .carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .carousel-img-left {
+    display: none;
+  }
+  .carousel-img-right {
+    background: rgba(0, 0, 0, 0.55);
+    background-blend-mode: multiply;
+  }
+  .carousel-img-text {
+    width: 80%;
+  }
+  .cart-items {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+  .object-centered,
+  .custom-search-input {
+    position: relative;
+    width: 100%;
+  }
+  .navbar-menu-icon {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    display: block;
+  }
+  .object-centered-mobile {
+    transform: translateX(-50%);
+    left: 50%;
+    position: relative;
+  }
+}

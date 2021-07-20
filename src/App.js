@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { CarouselSection } from "./components/Sections/CarouselSection";
+import { Footer } from "./components/Footer";
+import { NavbarInstance } from "./components/Instances/NavbarInstance";
+import { ProductsSection } from "./components/Sections/ProductsSection";
+import { SubscriptionSection } from "./components/Sections/SubscriptionSection";
+import { ToastContainer } from "react-toastify";
 
-function App() {
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <NavbarInstance />
+      <CarouselSection />
+      <ProductsSection />
+      <SubscriptionSection />
+      <Footer />
+      <ToastContainer />
+    </>
   );
-}
-
-export default App;
+};
